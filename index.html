@@ -1,124 +1,179 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Q4 Financial Earnings Report</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <title>Quarterly Earnings Report – Interactive Deck</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/league.css" id="theme">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.css">
+  <!-- Theme (choose any: black, white, league, beige, sky, night, serif, simple, solarized, blood, moon) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/theme/black.css" id="theme">
+
+  <!-- Code syntax highlighting theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/styles/github.min.css">
+  
+  <style>
+    .email-badge {
+      font-size: 0.7em;
+      opacity: 0.8;
+      margin-top: 0.5em;
+    }
+    .kpi {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+  </style>
 </head>
-
 <body>
-<div class="reveal">
+  <div class="reveal">
     <div class="slides">
+      
+      <!-- TITLE SLIDE -->
+      <section>
+        <h1>Quarterly Earnings Report</h1>
+        <h3>Interactive Technical Overview</h3>
+        <p class="email-badge">Prepared by: 22f1000091@ds.study.iitm.ac.in</p>
 
-        <section>
-            <h1>Q4 Earnings Report</h1>
-            <h3>Financial Technology Division</h3>
-            <div style="margin-top: 2rem; font-size: 0.8em; color: #aaa;">
-                <p>Prepared by: Technical Consultant</p>
-                <p>Contact: <a href="mailto:22f1000091@ds.study.iitm.ac.in" style="color: #42affa;">22f1000091@ds.study.iitm.ac.in</a></p>
-            </div>
-            
-            <aside class="notes">
-                Welcome everyone. I am the Technical Consultant. You can reach me at 22f1000091@ds.study.iitm.ac.in for the full dataset.
-            </aside>
-        </section>
+        <aside class="notes">
+          Briefly introduce yourself as the technical consultant.
+          Emphasize that this deck demonstrates modern, interactive presentation capabilities
+          (code, math, animations, markdown, etc.) in addition to financial content.
+        </aside>
+      </section>
 
-        <section data-markdown>
-            <textarea data-template>
-                ## Executive Summary
-                
-                *Key performance indicators for Q4:*
+      <!-- MARKDOWN SLIDE -->
+      <section data-markdown>
+        <textarea data-template>
+### Executive Summary (Markdown Slide)
 
-                - **Revenue:** Up by 15% YoY
-                - **User Acquisition:** +50k new active users
-                - **Cloud Costs:** Optimized by 12%
-                
-                ---
-                > "Innovation distinguishes between a leader and a follower."
-            </textarea>
-            <aside class="notes">
-                Note to speaker: Emphasize the cloud cost optimization as a key win for the engineering team.
-            </aside>
-        </section>
+- **Revenue:** ↑ 12% QoQ  
+- **Net Income:** ↑ 8% QoQ  
+- **RoE:** Stable at **15.4%**  
+- **Key Drivers:**
+  - Growth in digital payments and trading volume  
+  - Improved net interest margin (NIM)  
+  - Lower credit cost in retail portfolio  
 
-        <section>
-            <h2>ROI Calculation</h2>
-            <p>We utilized the standard Return on Investment formula to evaluate the new algorithmic trading bot:</p>
-            
-            \[ ROI = \left( \frac{\text{Net Profit}}{\text{Cost of Investment}} \right) \times 100 \]
+> This slide is written entirely in **Markdown**, rendered via the RevealJS Markdown plugin.
+        </textarea>
+        <aside class="notes">
+          Call out that this slide uses Markdown.
+          Mention that analysts can maintain sections of the deck as version-controlled Markdown files.
+        </aside>
+      </section>
 
-            <p>Given the low latency improvements, our efficiency approaches:</p>
-            \[ \lim_{x \to \infty} \left( 1 + \frac{1}{x} \right)^x = e \]
-            
-            <aside class="notes">
-                Walk the stakeholders through the ROI calculation logic.
-            </aside>
-        </section>
+      <!-- ANIMATED FRAGMENTS SLIDE -->
+      <section>
+        <h2>Key KPIs – Animated Reveal</h2>
+        <p class="kpi fragment fade-in">Net Interest Margin (NIM): 3.9%</p>
+        <p class="kpi fragment fade-in">Cost-to-Income Ratio: 42%</p>
+        <p class="kpi fragment fade-in">Non-Performing Assets (NPA): 1.8%</p>
+        <p class="kpi fragment fade-in">Digital Transactions: 78% of total</p>
 
-        <section>
-            <h2>Algorithmic Optimization</h2>
-            <p>The following Python snippet demonstrates our new profit logic:</p>
-            
-            <pre><code data-trim data-noescape class="language-python">
-# Author Email: 22f1000091@ds.study.iitm.ac.in
-def calculate_margin(revenue, cost):
+        <aside class="notes">
+          Use the fragments to pace the discussion.
+          After each KPI appears, briefly explain its significance:
+          NIM for profitability of core lending, Cost-to-Income for efficiency,
+          NPA for asset quality, and Digital Transactions for modernization and scale.
+        </aside>
+      </section>
+
+      <!-- CODE SAMPLE WITH SYNTAX HIGHLIGHTING -->
+      <section>
+        <h2>Sample Earnings Calculation (Code)</h2>
+        <pre><code class="language-python">
+def earnings_per_share(net_income, preferred_dividends, weighted_avg_shares):
     """
-    Calculates the profit margin percentage.
+    Basic EPS calculation used in quarterly reporting.
     """
-    if cost == 0:
-        return 0.0
-    
-    margin = ((revenue - cost) / revenue) * 100
-    return round(margin, 2)
+    return (net_income - preferred_dividends) / weighted_avg_shares
 
-print(calculate_margin(10000, 4500))
-            </code></pre>
-            
-            <aside class="notes">
-                Highlight the error handling in the code block.
-            </aside>
-        </section>
+# Example:
+net_income = 12_500_000      # in currency units
+preferred_dividends = 500_000
+weighted_avg_shares = 5_000_000
 
-        <section>
-            <h2>Q1 Goals (Forecast)</h2>
-            <p>Our roadmap includes:</p>
-            
-            <ul>
-                <li class="fragment fade-in-then-semi-out">Deploy Ledger V2 to Production</li>
-                <li class="fragment fade-in-then-semi-out">Integrate AI-driven fraud detection</li>
-                <li class="fragment fade-in-then-semi-out">Expand API coverage to APAC region</li>
-                <li class="fragment highlight-red">Complete Compliance Audit</li>
-            </ul>
+eps = earnings_per_share(net_income, preferred_dividends, weighted_avg_shares)
+print(f"EPS for the quarter: {eps:.2f}")
+        </code></pre>
 
-            <aside class="notes">
-                Press 'S' to see these notes. Click the 'down' arrow or spacebar to reveal each bullet point one by one.
-            </aside>
-        </section>
+        <aside class="notes">
+          Explain that code like this is part of internal analytics pipelines.
+          Stress that calculations are automated, version-controlled,
+          and reproducible for audit and regulatory requirements.
+        </aside>
+      </section>
+
+      <!-- MATH / FINANCIAL FORMULAS -->
+      <section>
+        <h2>Financial Formulas (MathJax)</h2>
+
+        <p class="fragment">Net Present Value (NPV):</p>
+        <p class="fragment">
+          $$ \text{NPV} = \sum_{t=1}^{T} \frac{CF_t}{(1 + r)^t} $$
+        </p>
+
+        <p class="fragment">Earnings Per Share (EPS):</p>
+        <p class="fragment">
+          $$ \text{EPS} = \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Avg. Shares}} $$
+        </p>
+
+        <p class="fragment">Return on Equity (RoE):</p>
+        <p class="fragment">
+          $$ \text{RoE} = \frac{\text{Net Income}}{\text{Average Shareholders' Equity}} $$
+        </p>
+
+        <aside class="notes">
+          Highlight that formulas are rendered using MathJax,
+          making it easier for stakeholders to validate core financial logic.
+          Connect each formula to a KPI used in the earnings release.
+        </aside>
+      </section>
+
+      <!-- WRAP-UP / CONTACT SLIDE -->
+      <section>
+        <h2>Wrap-up &amp; Next Steps</h2>
+        <ul>
+          <li class="fragment">Finalize commentary on revenue and margin trends</li>
+          <li class="fragment">Validate stress test and risk analytics outputs</li>
+          <li class="fragment">Prepare regulatory reporting extracts</li>
+        </ul>
+        <p class="fragment">
+          Contact: <strong>22f1000091@ds.study.iitm.ac.in</strong>
+        </p>
+
+        <aside class="notes">
+          Invite questions and clarify that detailed backup schedules
+          and model documentation are available separately.
+          Reiterate your email as the primary contact for technical follow-ups.
+        </aside>
+      </section>
 
     </div>
-</div>
+  </div>
 
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+  <!-- Reveal.js core JS -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/dist/reveal.js"></script>
 
-<script>
-    // Initialize Reveal with plugins
+  <!-- Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/highlight/highlight.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5/plugin/math/math.js"></script>
+
+  <script>
     Reveal.initialize({
-        controls: true,
-        progress: true,
-        center: true,
-        hash: true,
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+      hash: true,
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ],
+      // MathJax configuration for equations
+      mathjax3: {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      }
     });
-</script>
-
+  </script>
 </body>
 </html>
