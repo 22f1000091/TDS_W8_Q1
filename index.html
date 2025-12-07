@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Q4 Financial Earnings Report</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/league.css" id="theme">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+</head>
+
+<body>
+<div class="reveal">
+    <div class="slides">
+
+        <section>
+            <h1>Q4 Earnings Report</h1>
+            <h3>Financial Technology Division</h3>
+            <p>
+                <small>Prepared by: Technical Consultant<br>
+                Email: <a href="mailto:22f1000091@ds.study.iitm.ac.in">22f1000091@ds.study.iitm.ac.in</a></small>
+            </p>
+            
+            <aside class="notes">
+                Welcome everyone. Today we will review the Q4 performance metrics and our technical roadmap for the upcoming fiscal year.
+            </aside>
+        </section>
+
+        <section data-markdown>
+            <textarea data-template>
+                ## Executive Summary
+                
+                *This slide is rendered using Markdown.*
+
+                - **Revenue:** Up by 15% YoY
+                - **User Acquisition:** +50k new active users
+                - **Cloud Costs:** Optimized by 12%
+                
+                ---
+                > "Innovation distinguishes between a leader and a follower."
+            </textarea>
+            <aside class="notes">
+                Note to speaker: Emphasize the cloud cost optimization as a key win for the engineering team.
+            </aside>
+        </section>
+
+        <section>
+            <h2>ROI Calculation</h2>
+            <p>We utilized the standard Return on Investment formula to evaluate the new algorithmic trading bot:</p>
+            
+            \[ ROI = \left( \frac{\text{Net Profit}}{\text{Cost of Investment}} \right) \times 100 \]
+
+            <p>Given the low latency improvements, our efficiency approaches:</p>
+            \[ \lim_{x \to \infty} \left( 1 + \frac{1}{x} \right)^x = e \]
+            
+            <aside class="notes">
+                Walk the stakeholders through the ROI calculation logic. Mention that 'e' represents continuous growth in this context.
+            </aside>
+        </section>
+
+        <section>
+            <h2>Algorithmic Optimization</h2>
+            <p>The following Python snippet demonstrates our new profit logic:</p>
+            
+            <pre><code data-trim data-noescape class="language-python">
+def calculate_margin(revenue, cost):
+    """
+    Calculates the profit margin percentage.
+    """
+    if cost == 0:
+        return 0.0
+    
+    margin = ((revenue - cost) / revenue) * 100
+    return round(margin, 2)
+
+# Specific context for user: 22f1000091@ds.study.iitm.ac.in
+print(calculate_margin(10000, 4500))
+            </code></pre>
+            
+            <aside class="notes">
+                Highlight the error handling in the code block. This ensures system stability during high-frequency trading.
+            </aside>
+        </section>
+
+        <section>
+            <h2>Q1 Goals (Forecast)</h2>
+            <p>Our roadmap includes:</p>
+            
+            <ul>
+                <li class="fragment fade-in-then-semi-out">Deploy Ledger V2 to Production</li>
+                <li class="fragment fade-in-then-semi-out">Integrate AI-driven fraud detection</li>
+                <li class="fragment fade-in-then-semi-out">Expand API coverage to APAC region</li>
+                <li class="fragment highlight-red">Complete Compliance Audit</li>
+            </ul>
+
+            <aside class="notes">
+                Press 'S' to see these notes. Click the 'down' arrow or spacebar to reveal each bullet point one by one.
+            </aside>
+        </section>
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/math/math.js"></script>
+
+<script>
+    // Initialize Reveal with plugins
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX ]
+    });
+</script>
+
+</body>
+</html>
